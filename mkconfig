@@ -1,0 +1,6 @@
+<$MKINCDIR/config
+OBJNAME = aes
+CFILES = aes.c
+HFILES = `{goblin ls shr/inc/aes}
+ARFLAGS = r
+
