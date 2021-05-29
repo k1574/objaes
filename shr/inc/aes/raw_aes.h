@@ -74,7 +74,7 @@ enum {
 } ;
 
 struct AnsiEscSeq {
-	const char *fmt;	
+	char *fmt;	
 	int  narg;
 } ;
 typedef struct AnsiEscSeq EscSeq; 

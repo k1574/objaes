@@ -1,0 +1,5 @@
+<$MKINCDIR/config
+PROGNAME = test
+CFILES = main.c
+AFILES = ../shr/obj/aes.a
+INCS = -I../shr/inc
