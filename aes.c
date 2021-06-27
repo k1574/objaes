@@ -1,5 +1,5 @@
-#include "shr/inc/aes/raw_aes.h"
-#include "shr/inc/aes/aes.h"
+#include "shr/inc/raw_aes.h"
+#include "shr/inc/aes.h"
 
 #include <stdio.h>
 #include <sys/ioctl.h>
@@ -64,3 +64,4 @@ aes_move_to(int col, int row)
 {
 	aes_printf(aes_raw_esc_seqs[AesMoveTo].fmt, row, col);
 }
+

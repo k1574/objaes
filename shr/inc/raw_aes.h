@@ -70,6 +70,13 @@ enum {
 	AesClearTilBegOfLine,
 	AesClearEntLine,
 
+	AesMakeCurInvisible,
+	AesMakeCurVisible,
+	AesRestoreScreen,
+	AesSaveScreen,
+	AesEnableAltBuf,
+	AesDisableAltBuf,
+
 	AesLen
 } ;
 
@@ -142,6 +149,13 @@ EscSeq aes_raw_esc_seqs[AesLen] = {
 	[AesClearTilEndOfLine] = {ESC "0K", 0},
 	[AesClearTilBegOfLine] = {ESC "1K", 0},
 	[AesClearEntLine] = {ESC "2K", 0},
+
+	[AesMakeCurInvisible] = {ESC "?25l", 0},
+	[AesMakeCurVisible] = {ESC "?25h"},
+	[AesRestoreScreen] = {ESC "?47l", 0},
+	[AesSaveScreen] = {ESC "?47h", 0},
+	[AesEnableAltBuf] = {ESC "?1049h", 0},
+	[AesDisableAltBuf] = {ESC "?1049l", 0},
 } ;
 
 #endif
