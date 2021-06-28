@@ -88,11 +88,11 @@ typedef struct AnsiEscSeq EscSeq;
 
 EscSeq aes_raw_esc_seqs[AesLen] = {
 	[AesHome] = {ESC "H", 0} ,
-	[AesMoveTo] = {ESC "%d;%dH", 2} ,
-	[AesMoveUp] = {ESC "%dA", 1} ,
-	[AesMoveDown] = {ESC "%dB", 1} ,
-	[AesMoveRight] = {ESC "%dC", 1} ,
-	[AesMoveLeft] = {ESC "%dD", 1} ,
+	[AesMoveTo] = {ESC "%d;%dH", 2},
+	[AesMoveUp] = {ESC "%dA", 1},
+	[AesMoveDown] = {ESC "%dB", 1},
+	[AesMoveRight] = {ESC "%dC", 1},
+	[AesMoveLeft] = {ESC "%dD", 1},
 	[AesNextLine] = {ESC "%dE", 1},
 	[AesPrevLine] = {ESC "%dF", 1},
 	[AesMoveToCol] = {ESC "%dG", 1},

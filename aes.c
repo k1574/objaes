@@ -65,3 +65,15 @@ aes_move_to(int col, int row)
 	aes_printf(aes_raw_esc_seqs[AesMoveTo].fmt, row, col);
 }
 
+void
+aes_move_right(unsigned int n)
+{
+	aes_printf(aes_raw_esc_seqs[AesMoveRight].fmt, n);
+}
+
+void
+aes_move_left(unsigned int n)
+{
+	aes_printf(aes_raw_esc_seqs[AesMoveLeft].fmt, n);
+}
+

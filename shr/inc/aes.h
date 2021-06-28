@@ -7,6 +7,8 @@ void aes_save_pos(void);
 void aes_undo_pos(void);
 
 void aes_move_to(int col, int row);
+void aes_move_right(unsigned int n);
+void aes_move_left(unsigned int n);
 void aes_print(char *s);
 void aes_printf(char *fmt, ...);
 
