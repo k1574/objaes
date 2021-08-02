@@ -1,6 +1,11 @@
 #ifndef _AES_H
 #define _AES_H
 
+int aes_reset_term(void);
+void aes_disable_input_buffering(void);
+void aes_disable_input_echo(void);
+int aes_apply_term_settings(void);
+
 void aes_term_size(int *col, int *row);
 
 void aes_save_pos(void);

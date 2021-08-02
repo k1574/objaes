@@ -7,6 +7,46 @@
 #include <string.h>
 #include <stdarg.h>
 #include <stdlib.h>
+#include <termios.h>
+
+static struct termios term, term_orig;
+
+int
+aes_reset_term(void)
+{
+	static int first_time = 1 ;
+	if(first_time){
+		int ret;
+		if(ret = tcgetattr(0, &term_orig))
+			return ret ;
+		first_time = 0 ;
+	}
+	term = term_orig ;
+	return 0 ;
+}
+
+void
+aes_disable_input_buffering(void)
+{
+	/* Change to non-canonical mode. */
+	term.c_lflag &= ~ICANON ;
+
+	/* Read at least one byte. */ 
+	term.c_cc[VMIN] = 1 ;
+	term.c_cc[VTIME] = 0 ;
+}
+
+void
+aes_disable_input_echo(void)
+{
+	term.c_lflag &= ~ECHO ;
+}
+
+int
+aes_apply_term_settings(void)
+{
+	return tcsetattr(0, TCSANOW, &term) ;
+}
 
 void
 aes_print(char *s)
