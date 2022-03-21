@@ -3,4 +3,5 @@ OBJNAME = aes
 CFILES = aes.c
 HFILES = `{goblin ls shr/inc}
 ARFLAGS = r
+INCS = -Ishr/inc
 

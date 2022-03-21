@@ -1,5 +1,5 @@
-#include "shr/inc/raw_aes.h"
-#include "shr/inc/aes.h"
+#include "aes/raw_aes.h"
+#include "aes/aes.h"
 
 #include <stdio.h>
 #include <sys/ioctl.h>
